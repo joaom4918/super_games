@@ -2,7 +2,7 @@
 <body>
 
 
-@include('layout.includes.menu');
+@include('layout.includes.menu')
 
 
  

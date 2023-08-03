@@ -18,7 +18,7 @@
                     <a class="nav-link" href="{{route('admin.games.adicionar')}}">Inserir Jogos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Lista de Jogos</a>
+                    <a class="nav-link" href="{{route('admin.games.lista_jogos')}}">Lista de Jogos</a>
                 </li>
 
                 
