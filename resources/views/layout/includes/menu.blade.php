@@ -8,17 +8,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-             
+              
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Pagina Inicial</a>
-                 
+                    <a class="nav-link active" aria-current="page" href="/"><i class="fas fa-home"> Pagina Inicial</i></a>
                 </li>
+            
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('admin.games.adicionar')}}">Inserir Jogos</a>
+                    <a class="nav-link" href="{{route('admin.games.adicionar')}}"><i class="fas fa-plus"> Adicionar Jogos</i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('admin.games.lista_jogos')}}">Lista de Jogos</a>
+                    <a class="nav-link" href="{{route('admin.games.lista_jogos')}}"><i class="fas fa-clipboard-list"> Lista De jogos</i></a>
                 </li>
 
                 

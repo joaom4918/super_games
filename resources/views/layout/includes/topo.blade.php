@@ -13,13 +13,8 @@
         <link href="{{ asset('css/estilo.css') }}" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   
-
-
-
-
-
-       
 
     <title>Document</title>
 </head>

@@ -28,6 +28,17 @@ class GamesController extends Controller
 
         }
 
+        if ($req->hasFile('arquivo')) {
+            $arquivo = $req->file('arquivo');
+            $num = rand(1111, 9999);
+            $dir = "isos/";
+            $extensao = $arquivo->guessClientExtension();
+            $nomeArquivo = "Jogo" . $num . "." . $extensao;
+            $arquivo->move($dir, $nomeArquivo);
+            $dados['arquivo'] = $dir . "/" . $nomeArquivo;
+        }
+        
+
         Games::create($dados);
         return redirect()->route("site.home");
         
@@ -70,11 +81,38 @@ class GamesController extends Controller
             $dados['imagem']=$dir."/".$nomeImagem;
 
         }
-        
+
+   
         Games::find($id)->update($dados);
         return redirect()->route('site.home'); 
     }
 
+    public function lista_super_nintendo(){
+        $jogos=Games::where('plataforma','Snes')->get();
+        return view("listas.lista_super_nintendo",compact('jogos'));
+    }
+
+    public function lista_mega_drive(){
+
+        $jogos=Games::where('plataforma','Mega Driver')->get();
+        return view("listas.lista_mega_drive",compact('jogos'));
+    }
+
+    public function lista_nes(){ 
+        $jogos=Games::where('plataforma','Nes')->get();
+        return view("listas.lista_nes",compact('jogos'));
+    }
+
+    public function lista_master_system(){
+        $jogos=Games::where('plataforma','Master System')->get();
+        return view("listas.lista_master_system",compact('jogos'));
+    }
+
+    public function descricao($id){
+        $jogo=Games::find($id);
+        return view("admin.games.descricao",compact('jogo'));
+    }
+  
 
    
 }

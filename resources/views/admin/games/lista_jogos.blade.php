@@ -2,7 +2,8 @@
 
 @include('layout.base')
 
-<table class="table   table-striped">
+<h1>Lista De Jogos</h1>
+<table class="table table-striped">
 
     <thead>
         <th>ID</th>

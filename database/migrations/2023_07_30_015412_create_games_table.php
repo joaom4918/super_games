@@ -20,6 +20,8 @@ class CreateGamesTable extends Migration
             $table->string('plataforma');
             $table->string('genero');
             $table->text('descricao');
+            $table->string('arquivo');
+
             $table->timestamps();
         });
     }
