@@ -112,6 +112,11 @@ class GamesController extends Controller
         $jogo=Games::find($id);
         return view("admin.games.descricao",compact('jogo'));
     }
+
+    public function emuladores(){
+
+        return view("admin.games.emuladores");
+    }
   
 
    

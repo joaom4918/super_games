@@ -3,7 +3,13 @@
 
 
 
-<div class="container">
+<div class="text-center mt-5">
+  <img src="{{asset('img/games/sega_genesis_logo.png')}}" width="600" alt=""> 
+</div>
+
+
+  <div class="container mt-5">
+   
     <div class="row">
   
       @foreach ($jogos as $jogo)
@@ -16,12 +22,17 @@
             <p class="card-text"><i class="fas fa-gamepad"> {{$jogo->plataforma}}</i></p>
             <p><i class="fas fa-cube"> {{$jogo->genero}}</i></p> 
            
-            <a href="#" class="btn btn-primary" >Saiba Mais</a>
+            <a href="{{route('admin.games.descricao',$jogo->id)}}" class="btn btn-primary" >Saiba Mais</a>
           </div>
         </div>
       </div>
     
-    @endforeach
-    
-    </div> 
+    @endforeach 
   </div>
+  </div>
+ 
+  <div class="mt-5">
+    @include('layout.includes.rodape')
+</div>
+  
+ 

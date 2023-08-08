@@ -17,11 +17,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin.games.adicionar')}}"><i class="fas fa-plus"> Adicionar Jogos</i></a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin.games.lista_jogos')}}"><i class="fas fa-clipboard-list"> Lista De jogos</i></a>
                 </li>
 
-                
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('admin.games.emuladores')}}"><i class="fas fa-globe"> Link de Emuladores</i></a>
+                </li>
+
                
             </ul>
         </div>

@@ -3,13 +3,16 @@
 @include('layout.base')
 
 
-<h1>Nes</h1>
-<div class="container">
+<div class="mt-5 text-center">
+  <img src="{{asset('img/games/nes_logo.png')}}" width="600" alt=""> 
+</div>
+
+<div class="container mt-5">
     <div class="row">
   
       @foreach ($jogos as $jogo)
   
-      <div class="col-md-4">
+      <div class="col-md-4 mt-4">
         <div class="card" style="width: 18rem; background-color: #dee2e6;">
           <img src="{{asset($jogo->imagem)}}" class="card-img-top" alt="...">
           <div class="card-body">
@@ -18,12 +21,16 @@
             <p><i class="fas fa-cube"> {{$jogo->genero}}</i></p> 
             
             
-            <a href="#" class="btn btn-danger">Saiba Mais</a>
+            <a href="{{route('admin.games.descricao',$jogo->id)}}" class="btn btn-danger">Saiba Mais</a>
           </div>
         </div>
-      </div>
+      </div> 
     
     @endforeach
     
     </div> 
   </div>
+   
+  <div class="mt-5">
+    @include('layout.includes.rodape')
+</div>

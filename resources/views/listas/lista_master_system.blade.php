@@ -1,8 +1,11 @@
 @include('layout.base')
 
 
-<h1>Lista Master System</h1>
-<div class="container">
+<div class="mt-5 text-center">
+  <img src="{{asset('img/games/Sega-master-system-logo.png')}}" width="600" alt=""> 
+</div>
+
+<div class="container mt-5">
     <div class="row">
   
       @foreach ($jogos as $jogo)
@@ -16,7 +19,7 @@
             <p><i class="fas fa-cube"> {{$jogo->genero}}</i></p> 
             
             
-            <a href="#" class="btn btn-danger" style="border-color: #000000;">Saiba Mais</a>
+            <a href="{{route('admin.games.descricao',$jogo->id)}}" class="btn btn-danger" style="border-color: #000000;">Saiba Mais</a>
           </div>
         </div>
       </div>
@@ -25,3 +28,7 @@
     
     </div> 
   </div>
+
+  <div class="mt-5">
+    @include('layout.includes.rodape') 
+</div>

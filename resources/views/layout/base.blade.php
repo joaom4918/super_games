@@ -5,7 +5,7 @@
 @include('layout.includes.menu')
 
 
- 
+
 </body>
 
 </html>

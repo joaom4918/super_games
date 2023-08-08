@@ -21,6 +21,7 @@ Route::get('admin/games/excluir_game/{id}',['as'=>"admin.games.excluir_game","us
 Route::get('admin/games/editar_game/{id}',['as'=>"admin.games.editar_game","uses"=>"GamesController@editar_game"]);
 Route::put('admin/games/atualizar_game/{id}',['as'=>"admin.games.atualizar_game","uses"=>"GamesController@atualizar_game"]);
 Route::get('admin/games/descricao/{id}',['as'=>"admin.games.descricao","uses"=>"GamesController@descricao"]);
+Route::get('admin/games/emuladores',['as'=>"admin.games.emuladores","uses"=>"GamesController@emuladores"]);
 #########################
 
 Route::get('listas/lista_super_nintendo',['as'=>"listas.lista_super_nintendo","uses"=>"GamesController@lista_super_nintendo"]);
